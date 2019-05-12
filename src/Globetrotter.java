@@ -15,6 +15,7 @@ public class Globetrotter extends Person{
 			date = "Nessuna data";
 		}
 		
+		
 		public void order (){
 			Scanner scan = new Scanner (System.in);
 			System.out.println("Cerca un Cicerone per un viaggio:\n");
