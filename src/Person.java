@@ -31,19 +31,19 @@ public class Person {
 	//Registrazione
 	public void signUp() {		
 		Scanner scan = new Scanner (System.in);
-		System.out.println("Benvenuto! Inserisci i tuoi dati\n");
+		System.out.println("\nBenvenuto! Inserisci i tuoi dati");
 		System.out.print("Nome: ");
-		name = scan.nextLine();
+		this.name = scan.nextLine();
 		System.out.print("Cognome: ");
-		surname = scan.nextLine();
+		this.surname = scan.nextLine();
 		System.out.print("Email: ");
-		email = scan.next();	//Non possono esserci spazi (Si può fare un controllo con la grammatica regolare)
+		this.email = scan.next();	//Non possono esserci spazi (Si può fare un controllo con la grammatica regolare)
 		System.out.print("Password: ");
-		password = scan.next();
+		this.password = scan.next();
 		System.out.print("Numero di telefono: " );
-		phone = scan.next();
-		createFile(name, surname, phone, email, password);
-		scan.close();
+		this.phone = scan.next();
+		createFile(this.name, this.surname, this.phone, this.email, this.password);
+		//scan.close();
 	}
 	
 	//LOGIN
@@ -82,6 +82,10 @@ public class Person {
 		return email;
 	}
 	
+	public String getName(){
+		return name;
+	}
+	
 	
 	//Inserisce i dati della registrazione all'interno del file
 	private static void createFile (String name,String surname,String phone,String email,String password) {
@@ -100,8 +104,9 @@ public class Person {
 		
 		outputStream.printf("\n");
 		outputStream.close();
-		System.out.println("File scritto correttamente");
+		System.out.println("File scritto correttamente\n");
 	}
+	
 	
 	//Apre il file dove ci sono tutti gli account e vede se i dati inseriti esistono per l'accesso
 	public static String openAccessFile (String email, String password) {
