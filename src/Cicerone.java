@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Cicerone extends Globetrotter {
 	private String category;		//Categoria di viaggio
 	private String date;			//Data
+	private String email;			//Email
 	private String place;			//Luogo 
 	private double parcel;			//Costo dell'attività
 	private String info;			//Informazioni itinerario
@@ -20,6 +21,7 @@ public class Cicerone extends Globetrotter {
 		System.out.println("Inserisci i dati per la nuova attività da pubblicare\n");
 		System.out.print("Inserisci il luogo: ");
 		place = scan2.nextLine();
+		place = place.toLowerCase();	//in modo tale da non creare incomprensioni quando il globe cerca il luogo
 		System.out.print("Inserisci la data (formato gg/mm/aaaa): ");
 		date = scan2.nextLine();
 		System.out.print("Quante persone possono partecipare massimo: ");
@@ -27,6 +29,7 @@ public class Cicerone extends Globetrotter {
 		scan2.nextLine();	//Prende in input il carattere 'invio'
 		System.out.print("Inserisci la categoria del viaggio: ");
 		category = scan2.nextLine();
+		category = category.toLowerCase();	//in modo tale da non creare incomprensioni quando il globe cerca la categoria
 		System.out.print("Inserisci qualche info sul percorso: ");
 		info = scan2.nextLine();
 		System.out.print("Inserisci il tuo compenso: ");
@@ -36,7 +39,10 @@ public class Cicerone extends Globetrotter {
 		choice = scan2.nextInt();
 		if (choice == 1){
 			//Inserisce i dati nel file
-			createAttivitaFile(parcel,maxPerson, place,date,category, info, getEmail());
+			email = getEmail();
+			email = "EMAIL: " + email;
+			
+			createAttivitaFile(parcel,maxPerson, place,date,category, email, info);
 			System.out.println("Attività inserita\n");
 		}else if (choice == 2){
 			System.out.println("\nNon ho inserito questa attività");
@@ -51,42 +57,43 @@ public class Cicerone extends Globetrotter {
 	
 	//Mostra tutte le attività registrate dal cicerone loggato
 	public void myActivity(String email){
-			boolean find = false;
-			String fileName = "attività.txt";
-			Scanner inputStream = null;
+		Scanner scan3 = new Scanner(System.in);
+		boolean find = false;
+		String fileName = "attività.txt";
+		Scanner inputStream = null;
 	
-			try {
-				inputStream =  new Scanner (new File(fileName));	
-			}catch (FileNotFoundException e) {
-				System.out.println("Errore nell'apertura del file");
-				System.exit(0);    //Termina il programma
-			}
+		try {
+			inputStream =  new Scanner (new File(fileName));	
+		}catch (FileNotFoundException e) {
+			System.out.println("Errore nell'apertura del file");
+			System.exit(0);    //Termina il programma
+		}
 			//Legge i dati presenti nel file
-			while(inputStream.hasNextLine()) {
-				String riga = inputStream.nextLine();
-				if (riga.contains(email)){
-					if(find == false){
-						System.out.println("\nEcco le tue attività:");
-					}
-					System.out.println(riga);	
-					find = true;
+		while(inputStream.hasNextLine()) {
+			String riga = inputStream.nextLine();
+			if (riga.contains(email)){
+				if(find == false){
+					System.out.println("\nEcco le tue attività:");
 				}
+				System.out.println(riga);	
+				find = true;
 			}
+		}
 			
-			if(find == false){
-				System.out.println("Non hai inserito alcuna attività ancora.");
-			}
+		if(find == false){
+			System.out.println("Non hai inserito alcuna attività ancora.");
+		}
 			
-			inputStream.close();	
+		inputStream.close();	
 			
-			Scanner scan3 = new Scanner(System.in);
-			System.out.println("");
-			//TODO Inserire uno stop prima di ritornare nel menu principale
+		//Piccola pausa per poter visualizzare le proprie attività prima di ritornare al menu
+		System.out.print("\nPremi un tasto per continuare . . . \n");
+		scan3.nextLine();
 	}
 	
 	
 	//Inserisce la nuova attività insieme a tutte le altre
-	private static void createAttivitaFile (double money,int max, String... text) {
+	private static void createAttivitaFile (double money,int max, String place, String date, String category, String email,String info) {
 		String fileName = "attività.txt";
 		PrintWriter outputStream = null;
 		
@@ -106,9 +113,12 @@ public class Cicerone extends Globetrotter {
 		}else{
 			outputStream.printf(" Massimo:%d  Persone |", max);
 			}
-		for (int i = 0; i < text.length; i++) {
-			outputStream.printf(" %-25s |", text[i]);
-	    }
+		
+		outputStream.printf(" %-25s |", place);
+		outputStream.printf(" %-10s |", date);
+		outputStream.printf(" TAG: %-12s |", category);
+		outputStream.printf(" %-30s |", email);
+		outputStream.printf(" INFO: %-45s |", info);	
 		outputStream.printf("\n");
 		outputStream.close();
 		System.out.println("File scritto correttamente");

@@ -1,10 +1,15 @@
-| €45,00 | Massimo:65 Persone | Matera                    | 23/12/2019                | Happy                     | visiteremo tutto          | emmanuele.carlone@gmail.com |
-| €84,00 | Massimo:9  Persone | Canosa di Puglia          | 21/03/2020                | Business                  | molto interesting         | pasquy87@gmail.com          |
-| €54,00 | Massimo:7  Persone | Trani                     | 17/09/2021                | Business                  | funny                     | emmanuele.carlone@gmail.com |
-| €76,00 | Massimo:12 Persone | Bisceglie                 | 24/08/2019                | Travel                    | vedremo tutto             | emmanuele.carlone@gmail.com |
-| €65,00 | Massimo:4  Persone | Canosa di Puglia          | 23/89/2019                | Visit                     | vi porto a vedere tutto   | pasquy87@gmail.com          |
-| €45,00 | Massimo:15 Persone | Can Haus                  | 23/12/2019                | Visit                     | Tutte cose belle          | emmanuele.carlone@gmail.com |
-| €43,00 | Massimo:17 Persone | Montervino                | 21/12/2021                | Mangime                   | molto interessante        | pasquy87@gmail.com          |
-| €87,00 | Massimo:15 Persone | Monticchio                | 23/12/2019                | mangiar                   | davvero bello             | emmanuele.carlone@gmail.com |
-| €90,00 | Massimo:23 Persone | Massacarrara              | 31/12/2020                | Travel                    | tutto quanto              | pasquy87@gmail.com          || €43,00 | Massimo:43 Persone | prova                     | 12/07/2019                | business                  | minchia zio               | emmanuele.carlone@gmail.com |
-| €89,00 | Massimo:43 Persone | Barletta                  | 23/09/2020                | easy                      | bellissm                  | emmanuele.carlone@gmail.com |
+| €45,00 | Massimo:65 Persone | matera                    | 23/12/2019 | TAG: svago        | EMAIL: emmanuele.carlone@gmail.com | INFO: eccezionale		   			  |
+| €84,00 | Massimo:9  Persone | canosa di puglia          | 21/03/2020 | TAG: business     | EMAIL: pasquy87@gmail.com          | INFO: magnifico		   			  |
+| €54,00 | Massimo:7  Persone | trani                     | 17/09/2021 | TAG: business     | EMAIL: emmanuele.carlone@gmail.com | INFO: stupendo		  			  |
+| €76,00 | Massimo:12 Persone | bisceglie                 | 24/08/2019 | TAG: itinerario   | EMAIL: emmanuele.carlone@gmail.com | INFO: bellissimissimo	   			  |
+| €65,00 | Massimo:4  Persone | canosa di puglia          | 23/89/2019 | TAG: svago        | EMAIL: pasquy87@gmail.com          | INFO: best				  	  |
+| €45,00 | Massimo:15 Persone | can haus                  | 23/12/2019 | TAG: culturale    | EMAIL: emmanuele.carlone@gmail.com | INFO: easypeasy		 			  |
+| €43,00 | Massimo:17 Persone | montervino                | 21/12/2021 | TAG: itinerario   | EMAIL: pasquy87@gmail.com          | INFO: sono il migliore 	 			  |
+| €87,00 | Massimo:15 Persone | monticchio                | 23/12/2019 | TAG: svago        | EMAIL: emmanuele.carlone@gmail.com | INFO: splendido		 			  |
+| €90,00 | Massimo:23 Persone | massacarrara              | 31/12/2020 | TAG: gastronomico | EMAIL: pasquy87@gmail.com          | INFO: visiteremp tutto       			  |
+| €89,00 | Massimo:43 Persone | barletta                  | 23/09/2020 | TAG: itinerario   | EMAIL: emmanuele.carlone@gmail.com | INFO: bellissim		   			  |
+| €45,00 | Massimo:43 Persone | minervino                 | 23/03/2019 | TAG: culturale    | EMAIL: emmanuele.carlone@gmail.com | INFO: bellissimo              			  |
+| €76,00 | Massimo:16 Persone | matera                    | 23/07/2019 | TAG: business     | EMAIL: pasquy87@gmail.com          | INFO: vedremo di tutto                              |
+| €34,00 | Massimo:45 Persone | minervino murge           | 23/07/2019 | TAG: gastronomico | EMAIL: emmanuele.carlone@gmail.com | INFO: ottimo!                                       |
+| €34,00 | Massimo:34 Persone | matera                    | 23/07/2019 | TAG: business     | EMAIL: emmanuele.carlone@gmail.com | INFO: tutto bello                                   |
+| €43,00 | Massimo:43 Persone | mattinata                 | 23/12/2020 | TAG: gastronomico | EMAIL: emmanuele.carlone@gmail.com | INFO: vedremo delle belle                           |

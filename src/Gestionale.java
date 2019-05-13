@@ -40,29 +40,40 @@ public class Gestionale {
 		System.out.print("Scelgo: ");
 		choice = scan.nextInt();
 		
-
+		//Entra nella funzionalità Cicerone
 		if (choice == 1){
 			int choiceCicero;
 			System.out.println("\nMenu del cicerone!\nPer ora puoi:");
 			System.out.println("1.Inserire una nuova attività");
-			System.out.println("2.Visualizzare le tue attività");
+			System.out.println("2.Visualizzare le tue attività inserite");
 			System.out.print("Scelgo: ");
 			choiceCicero = scan.nextInt();
 			
-			if (choiceCicero == 1){
-				//Inserisce nuova attività
+			if (choiceCicero == 1){			//Inserisce nuova attività
 				user.newActivity();	
-			}else if(choiceCicero == 2){
+			}else if(choiceCicero == 2){	//Visualizza attività registrate
 				email = user.getEmail();
 				user.myActivity(email);
-				
+			}else{
+				System.out.println("Scelta errata");
 			}
 			
-			
-			
+		//Entra nella funzionalità Globetrotter
 		}else if (choice == 2){
-			System.out.println("\nMenu del Globetrotter!");
-			System.out.println("\nIn corso di sviluppo\n");
+			int choiceGlobe;
+			System.out.println("\nMenu del Globetrotter!\nCosa desideri fare?\n");
+			System.out.print("1.Cercare un Cicerone per un viaggio\n"
+					+ "2.Le tue prenotazioni\n\n Scelgo: ");
+			choiceGlobe = scan.nextInt();
+			
+			if (choiceGlobe == 1){
+				user.searchForTrip();
+			}else if (choiceGlobe == 2){
+				System.out.println("Ancora in fase di sviluppo");
+			}else{
+				System.out.println("Scelta errata");
+			}
+			
 		}else if (choice == 0){
 			System.out.print("A presto " + user.getName());
 		}else{
