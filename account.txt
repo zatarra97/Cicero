@@ -1,0 +1,4 @@
+| NOME: Emmanuele                 | COGNOME: Carlone                   | PHONE: 3892434782      | EMAIL: emmanuele.carlone@gmail.com | PWD: lelegigi                  |
+| NOME: Pasquale                  | COGNOME: Coletti                   | PHONE: 43187523451     | EMAIL: pasquy87@gmail.com        | PWD: pasqui453                 |
+| NOME: Giuseppe                  | COGNOME: Gallone                   | PHONE: 1121212131      | EMAIL: giusegal@live.it          | PWD: puttantour                |
+
